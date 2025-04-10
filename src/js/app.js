@@ -39,18 +39,31 @@ function render(variables = {}) {
           <h3>${variables.city == null ? "City" : variables.city}, 
           ${variables.country == null ? "Country" : variables.country}</h3>
           <ul class="${variables.socialMediaPosition}">
+            
+          <li><a href="${
+            variables.twitter == null
+              ? "https://x.com/4geeksacademy"
+              : `https://x.com/${variables.twitter}`
+          }" target="_blank"><i class="fab fa-twitter"></i></a></li>
+
             <li><a href="${
-              variables.twitter
-            }"><i class="fab fa-twitter"></i></a></li>
+              variables.github == null
+                ? "https://github.com/4geeksacademy"
+                : `https://github.com/${variables.github}`
+            }" target="_blank"><i class="fab fa-github"></i></a></li>
+
             <li><a href="${
-              variables.github
-            }"><i class="fab fa-github"></i></a></li>
+              variables.linkedin == null
+                ? "https://linkedin.com/school/4geeksacademy"
+                : `https://linkedin.com/${variables.linkedin}`
+            }" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+
             <li><a href="${
-              variables.linkedin
-            }"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="${
-              variables.instagram
-            }"><i class="fab fa-instagram"></i></a></li>
+              variables.instagram == null
+                ? "https://instagram.com/4geeksacademy"
+                : `https://instagram.com/${variables.instagram}`
+            }" target="_blank"><i class="fab fa-instagram"></i></a></li>
+
           </ul>
         </div>
     `;
